@@ -86,9 +86,6 @@ C_INCLUDES =  \
 -ICMSIS \
 -ILibraries/inc \
 -IHeaders \
--IFreeRTOS \
--IFreeRTOS/include \
--IFreeRTOS/portable/GCC/ARM_CM3 \
 -IUser
 
 # compile gcc flags
