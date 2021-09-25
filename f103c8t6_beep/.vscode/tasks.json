@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "GCC_PATH=C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/bin"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Build & Download",
+            "type": "shell",
+            "command": "C:/openocd-0.10.0/bin/openocd.exe",
+            "args": [
+                "-f",
+                "C:/openocd-0.10.0/scripts/interface/stlink.cfg",
+                "-f",
+                "C:/openocd-0.10.0/scripts/target/stm32f1x.cfg",
+                "-c",
+                "program build/${workspaceFolderBasename}.elf verify reset exit"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "dependsOn": "Build"
+        }
+    ]
+}

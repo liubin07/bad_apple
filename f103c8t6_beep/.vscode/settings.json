@@ -1,0 +1,10 @@
+{
+    //"C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "cortex-debug.openocdPath": "C:/openocd-0.10.0/bin/openocd.exe",
+    "cortex-debug.armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/bin",
+    "files.associations": {
+        "main.h": "c",
+        "beep.h": "c"
+    }
+}
